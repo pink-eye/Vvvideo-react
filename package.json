@@ -1,0 +1,70 @@
+{
+	"name": "vvvideo-react",
+	"productName": "vvvideo-react",
+	"version": "1.0.0",
+	"description": "The open-source app to watch YT videos. Licensed GPLv3",
+	"main": ".webpack/main",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+		"format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+		"svg:transform": "./node_modules/@svgr/cli/bin/svgr --template svgr.template.js --ext tsx --jsx-runtime automatic --memo --replace-attr-values '#000={color},inherit={color}' --ignore-existing --icon 20 --svgo-config svgo.config.js src/renderer/shared/assets/svg -d src/renderer/shared/ui/iconComponents --no-index"
+	},
+	"keywords": [],
+	"author": {
+		"name": "pink-eye",
+		"email": "3fvvu3fx@anonaddy.me"
+	},
+	"license": "GPL-3.0",
+	"config": {
+		"forge": "./forge.config.js"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "6.0.0-beta.70",
+		"@electron-forge/maker-deb": "6.0.0-beta.70",
+		"@electron-forge/maker-rpm": "6.0.0-beta.70",
+		"@electron-forge/maker-squirrel": "6.0.0-beta.70",
+		"@electron-forge/maker-zip": "6.0.0-beta.70",
+		"@electron-forge/plugin-webpack": "6.0.0-beta.70",
+		"@svgr/cli": "^6.5.1",
+		"@types/compose-function": "^0.0.30",
+		"@types/react": "^18.0.24",
+		"@types/react-dom": "^18.0.8",
+		"@types/styled-components": "^5.1.26",
+		"@typescript-eslint/eslint-plugin": "^5.41.0",
+		"@typescript-eslint/parser": "^5.41.0",
+		"@vercel/webpack-asset-relocator-loader": "1.7.3",
+		"css-loader": "^6.7.1",
+		"electron": "21.2.0",
+		"eslint": "^8.26.0",
+		"eslint-plugin-import": "^2.26.0",
+		"fork-ts-checker-webpack-plugin": "^6.0.1",
+		"node-loader": "^2.0.0",
+		"prettier": "^2.6.2",
+		"style-loader": "^3.3.1",
+		"ts-loader": "^9.4.1",
+		"typescript": "~4.8.4"
+	},
+	"dependencies": {
+		"@freetube/yt-trending-scraper": "^2.0.1",
+		"@tanstack/react-location": "^3.7.4",
+		"compose-function": "^3.0.3",
+		"electron-squirrel-startup": "^1.0.0",
+		"proxy-agent": "^5.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-player": "^2.11.0",
+		"react-virtuoso": "^2.19.1",
+		"sponsorblock-api": "^0.2.2",
+		"styled-components": "^5.3.6",
+		"youtube-suggest": "^1.2.0",
+		"yt-channel-info": "^3.2.1",
+		"ytdl-core": "^4.11.2",
+		"ytpl": "^2.3.0",
+		"ytsr": "^3.8.0",
+		"zustand": "^4.1.3"
+	}
+}
